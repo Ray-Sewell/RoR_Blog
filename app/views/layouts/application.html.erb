@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RoRBlog</title>
+    <title>Yet another blog app</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'articles', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
   </head>
 
   <body>
-    <%= yield %>
-    <% flash.each do |type, msg| %>
-      <div>
-        <%= msg %>
-      </div>
-    <% end %>
+    <div class="nav_bar">
+      <%= link_to "Yet another blog app", root_path %>
+    </div>
+    <div class="yield_body">
+      <%= yield %>
+    </div>
+    <div class="flash_collection">
+      <% flash.each do |type, msg| %>
+        <p><%= msg %></p>
+      <% end %>
+    </div>
   </body>
 </html>
