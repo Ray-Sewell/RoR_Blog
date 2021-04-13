@@ -1,4 +1,4 @@
-$primary-color: tomato;
+$primary-color: #ee6352;
 $secondary-color: #3fa7d6;
 $notice-color: #59cd90;
 
@@ -34,8 +34,14 @@ time, mark, audio, video {
     }
 }
 
-.yield_body {
-    margin-left: 1em;
+.application_body_container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    .application_body {
+        margin-top: 2em;
+        width:80vw;
+    }
 }
 
 .flash_collection {

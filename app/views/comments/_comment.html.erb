@@ -1,16 +1,8 @@
-<p>
-  <strong>Author:</strong>
-  <%= comment.author %>
-</p>
-
-<p>
-  <strong>Comment:</strong>
-  <%= comment.body %>
-</p>
-
-<p>
-  <%= link_to 'Destroy Comment', [comment.article, comment],
+<div class="render_comment_container">
+  <p class="render_comment_author"><%= comment.author%></p>
+  <p class="render_comment_timestamp"><%= comment.created_at%></p>
+  <p class="render_comment_body"><%= comment.body %></p>
+  <%= link_to 'Delete', [comment.article, comment],
               method: :delete,
               data: { confirm: "Are you sure?" } %>
-</p>
-
+</div>

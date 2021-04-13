@@ -1,24 +1,18 @@
-<p id="notice"><%= notice %></p>
-<br>
-<br>
-<h1>All posts</h1>
-<div class="article_new">
-  <%= link_to 'New Post', new_article_path %>
-</div>
-<br>
-<br>
-<br>
-<div class="articles_collection">
-  <% @articles.each do |article| %>
-    <div class="article_container">
-      <div class="article_title"><%= link_to article.title, article %></div>
-      <br>
-      <div class="article_body"><p><%= article.body %></p></div>
-      <br>
-      <div class="aricle_nav">
-        <div class="article_edit"><%= link_to 'Edit', edit_article_path(article) %></div>
-        <div class="article_destroy"><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+<div class="index_article_container">
+  <h1>All posts</h1>
+  <div class="index_article_new">
+    <%= link_to 'New Post', new_article_path %>
+  </div>
+  <div class="index_article_collection">
+    <% @articles.each do |article| %>
+      <div class="index_article_preview">
+        <div class="index_article_title"><%= link_to article.title, article %></div>
+        <div class="index_article_body"><p><%= article.body %></p></div>
+        <div class="index_aricle_nav">
+          <div class="index_article_edit"><%= link_to 'Edit', edit_article_path(article) %></div>
+          <div class="index_article_destroy"><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>

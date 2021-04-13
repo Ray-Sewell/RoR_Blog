@@ -17,8 +17,10 @@
     <div class="nav_bar">
       <%= link_to "Yet another blog app", root_path %>
     </div>
-    <div class="yield_body">
-      <%= yield %>
+    <div class="application_body_container">
+      <div class="application_body">
+        <%= yield %>
+      </div>
     </div>
     <div class="flash_collection">
       <% flash.each do |type, msg| %>

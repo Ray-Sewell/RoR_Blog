@@ -2,75 +2,156 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-$primary-color: tomato;
+$primary-color: #ee6352;
 $secondary-color: #3fa7d6;
 $notice-color: #59cd90;
 
-h1 {
-    font-size: 2em;
-    color:$primary-color;
-    float: left;
-}
-
-.article_new {
-    float: right;
-    padding: 0.2em;
-    padding-bottom: 0.1em;
-    margin-right: 3em;
-    background-color: $notice-color;
-    a {
-        font-size: 1.3em;
-        font-weight: 700;
-        color: white;
-        text-decoration: none;
+.index_article_container {
+    h1 {
+        font-size: 2em;
+        color:$primary-color;
+        float: left;
     }
-    border-radius: 5px;
-}
-
-.articles_collection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .article_container {
-        height: min-content;
-        min-width: 30em;
-        max-width: 50em;
-        border: 2px solid $secondary-color;
-        border-radius: 5px;
-        padding: 0.4em;
-        padding-top: 1em;
-        margin: 1em;
-        display:table-column;
-        word-wrap: break-word;
-        
+    .index_article_new {
+        float: right;
+        padding: 0.2em;
+        padding-bottom: 0.1em;
+        margin-right: 3em;
+        background-color: $notice-color;
         a {
-            font-size: 0.8em;
-            color:$primary-color;
+            font-size: 1.3em;
+            font-weight: 700;
+            color: white;
             text-decoration: none;
         }
-        .article_title{
-            text-align: center;
+        border-radius: 5px;
+    }
+    .index_article_collection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .index_article_preview {
+            padding: 0.4em;
+            padding-top: 1em;
+            margin: 1em;
+            margin-top: 1em;
+            height: min-content;
+            min-width: 30em;
+            max-width: 50em;
+            border: 2px solid $secondary-color;
+            border-radius: 5px;
+            
+            display:table-column;
+            word-wrap: break-word;
             a {
-                font-size: 1.4em;
-                font-weight: 700;
-                color:$secondary-color;
+                font-size: 0.8em;
+                color:$primary-color;
                 text-decoration: none;
             }
+            .index_article_title{
+                text-align: center;
+                a {
+                    font-size: 1.4em;
+                    font-weight: 700;
+                    color:$primary-color;
+                    text-decoration: none;
+                }
+            }
+            .index_article_body {
+                margin-top: 1em;
+                margin-bottom: 1em;
+                max-height: 12em;
+                overflow: auto;
+                font-size: 1em;
+                color:black;
+            }
+            .index_article_edit {
+                float: left;
+            }
+            .index_article_destroy {
+                float: right;
+            }
         }
-        .article_body {
-            max-height: 16em;
-            overflow: auto;
-            font-size: 1em;
-            color:black;
+    }
+}
+
+.show_article_container {
+    display: flex;
+    a {
+        font-size: 1em;
+        color:$primary-color;
+        text-decoration: none;
+    }
+    .show_article_render {
+        float: left;
+        .show_article_title {
+            text-align: center;
+            font-size: 1.6em;
+            font-weight: 700;
+            color:$primary-color;
         }
-        .article_edit {
+        .show_article_body {
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+        .show_article_edit {
             float: left;
         }
-        .article_destroy {
+        .show_article_destroy {
             float: right;
         }
     }
+    .show_article_comments {
+        margin-left: 2em;
+    }
 }
 
+.create_comment_container {
+    .create_comment_author {
+        border: 2px solid $secondary-color;
+    }
+    .create_comment_body {
+        border: 2px solid $secondary-color;
+    }
+    .create_comment_submit {
+        font-weight: 600;
+        padding: 0.2em;
+        margin-top: 1em;
+        color:white;
+        border: none;
+        background-color: $notice-color;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    label {
+        margin-top: 1em;
+        color: $secondary-color;
+        font-weight: 600;
+    }
+}
 
+.render_comment_container {
+    margin-top:2em;
+    display: flex;
+    flex-direction: column;
+    .render_comment_author {
+        color: $secondary-color;
+        font-weight: 600;
+    }
+    .render_comment_timestamp {
+        color: $secondary-color;
+        font-size: 0.7em;
+    }
+    .render_comment_body {
+        margin-top:0.5em;
+        margin-bottom:0.5em;
+    }
+    a {
+        font-size: 0.7em;
+        color:$primary-color;
+        text-decoration: none;
+    }
+}
 
