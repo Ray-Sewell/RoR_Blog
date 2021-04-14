@@ -1,7 +1,11 @@
+<%= content_for :title do %>
+  <h1 class="page_title">all posts</h1>
+<%end%>
 <div class="index_article_container">
-  <h1>All posts</h1>
-  <div class="index_article_new">
-    <%= link_to 'New Post', new_article_path %>
+  <div>
+    <div class="index_article_new">
+      <%= link_to 'New Post', new_article_path %>
+    </div>
   </div>
   <div class="index_article_collection">
     <% @articles.each do |article| %>
@@ -9,8 +13,8 @@
         <div class="index_article_title"><%= link_to article.title, article %></div>
         <div class="index_article_body"><p><%= article.body %></p></div>
         <div class="index_aricle_nav">
-          <div class="index_article_edit"><%= link_to 'Edit', edit_article_path(article) %></div>
           <div class="index_article_destroy"><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+          <div class="index_article_edit"><%= link_to 'Edit', edit_article_path(article) %></div>
         </div>
       </div>
     <% end %>

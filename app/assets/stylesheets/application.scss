@@ -24,23 +24,27 @@ time, mark, audio, video {
 }
 
 .nav_bar {
-    padding: 1em;
+    padding: 0.7em;
     background-color: $primary-color;
+    text-align: center;
     a {
         font-size: 2.5em;
         font-family: 'Pacifico', cursive;
         color:white;
         text-decoration: none;
     }
+    .page_title {
+        font-size: 1.5em;
+        color:white;
+    }
 }
 
 .application_body_container {
-    width: 100vw;
     display: flex;
     justify-content: center;
     .application_body {
         margin-top: 2em;
-        width:80vw;
+        margin-bottom: 2em;
     }
 }
 
@@ -49,8 +53,8 @@ time, mark, audio, video {
     bottom: 0;
     color:white;
     background-color: $notice-color; 
-    width: 100vw;
     p {
-        padding: 1em;
+        font-weight: 600;
+        padding: 0.5em;
     }
 }
