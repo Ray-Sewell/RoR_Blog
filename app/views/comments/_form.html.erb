@@ -1,9 +1,11 @@
-<div class="create_comment_container">
+<div class='create_comment_container'>
   <%= form_with model: [ @article, @article.comments.build ] do |form|%>
     <%= form.label :author %>
-    <%= form.text_field :author, :class => 'create_comment_author'%>
+    <%= form.text_field :author, :class => 'input_basic'%>
     <%= form.label :body %>
-    <%= form.text_area :body, :class => 'create_comment_body'%>
-    <%= form.submit :class => 'create_comment_submit'%>
+    <%= form.text_area :body, :class => 'input_basic'%>
+    <%= form.label :status %><br>
+    <%= form.select :status, ['public', 'private', 'archived'], selected: 'public'%>
+    <%= form.submit :class => 'confirm_button'%>
   <% end %>
 </div>

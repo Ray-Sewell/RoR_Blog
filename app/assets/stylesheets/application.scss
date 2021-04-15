@@ -24,7 +24,7 @@ time, mark, audio, video {
 }
 
 .nav_bar {
-    padding: 0.7em;
+    padding: 0.2em;
     background-color: $primary-color;
     text-align: center;
     a {
@@ -34,6 +34,7 @@ time, mark, audio, video {
         text-decoration: none;
     }
     .page_title {
+        margin-top:0.5em;
         font-size: 1.5em;
         color:white;
     }
@@ -43,7 +44,7 @@ time, mark, audio, video {
     display: flex;
     justify-content: center;
     .application_body {
-        margin-top: 2em;
+        margin-top: 1em;
         margin-bottom: 2em;
     }
 }

@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  http_basic_authenticate_with name: "secret", password: "secret", except: [:index, :show]
 
   def index
     @articles = Article.all
@@ -20,7 +21,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
 
     if @article.save
-      redirect_to @article, notice: "Your article was created!"
+      redirect_to @article, notice: 'Your article was created!'
     else
       render :new
     end
@@ -29,7 +30,7 @@ class ArticlesController < ApplicationController
   def update
     @article = set_article
     if @article.update(article_params)
-      redirect_to @article, notice: "Your article was updated!"
+      redirect_to @article, notice: 'Your article was updated!'
     else
       render :edit
     end
@@ -38,7 +39,7 @@ class ArticlesController < ApplicationController
   def destroy
     @article = set_article
     @article.destroy
-    redirect_to root_path, info: "Article was destroyed."
+    redirect_to root_path, info: 'Article was destroyed.'
   end
 
   private
@@ -47,6 +48,6 @@ class ArticlesController < ApplicationController
     end
 
     def article_params
-      params.require(:article).permit(:title, :body)
+      params.require(:article).permit(:title, :body, :status)
     end
 end

@@ -6,61 +6,67 @@ $primary-color: #ee6352;
 $secondary-color: #3fa7d6;
 $notice-color: #59cd90;
 
+a {
+    font-size: 0.8em;
+    font-weight: 700;
+    color:#3fa7d6;
+    text-decoration: none;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin-top: 1em;
+    color: $secondary-color;
+    font-weight: 600;
+}
+.confirm_button {
+    font-family: Helvetica, Arial, sans-serif;
+    margin-top: 1em;
+    padding-top: 0.2em;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    background-color: $notice-color;
+    border:none;
+    cursor: pointer;
+}
+.article_title {
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: 700;
+    color:#3fa7d6;
+    text-decoration: none;
+}
+.input_basic, .input_body, select {
+    border: 2px solid $secondary-color;
+    height: 2em;
+    min-width: 10em;
+    max-width: 100%;
+    resize: vertical;
+}
+.input_body {
+    height:40em;
+}
+
 .index_article_container {
     display: flex;
     flex-direction: column;
-    h1 {
-        font-size: 2em;
-        color:$primary-color;
-    }
-    .index_article_new {
-        text-align: center;
-        padding: 0.2em;
-        padding-bottom: 0.1em;
-        background-color: $notice-color;
-        a {
-            font-size: 1.3em;
-            font-weight: 700;
-            color: white;
-            text-decoration: none;
-        }
-    }
     .index_article_collection {
         display: flex;
         flex-direction: column;
         align-items: center;
         .index_article_preview {
-            padding: 0.4em;
-            padding-top: 1em;
             margin: 1em;
-            margin-top: 1em;
-            height: min-content;
-            min-width: 30em;
             max-width: 50em;
-            
-            display:table-column;
-            word-wrap: break-word;
-            a {
-                font-size: 0.8em;
-                color:#3fa7d6;
-                text-decoration: none;
-            }
-            .index_article_title{
-                text-align: center;
-                a {
-                    font-size: 1.4em;
-                    font-weight: 700;
-                    color:#3fa7d6;
-                    text-decoration: none;
-                }
-            }
             .index_article_body {
                 margin-top: 1em;
                 margin-bottom: 1em;
                 max-height: 12em;
                 overflow: auto;
-                font-size: 1em;
-                color:black;
             }
             .index_article_destroy {
                 float: left;
@@ -74,20 +80,12 @@ $notice-color: #59cd90;
 
 .show_article_container {
     display: flex;
-    a {
-        font-size: 1em;
-        color:$secondary-color;
-        text-decoration: none;
-    }
+    margin-left: 1em;
+    margin-right: 1em;
     .show_article_render {
-        width: 40em;
+        min-width: 10em;
+        max-width: 40em;
         float: left;
-        .show_article_title {
-            text-align: center;
-            font-size: 1.6em;
-            font-weight: 700;
-            color:$secondary-color;
-        }
         .show_article_body {
             margin-top: 1em;
             margin-bottom: 1em;
@@ -100,34 +98,8 @@ $notice-color: #59cd90;
         }
     }
     .show_article_comments {
-        width:20em;
+        min-width: 10em;
         margin-left: 2em;
-    }
-}
-
-.create_comment_container {
-    .create_comment_author {
-        border: 2px solid $secondary-color;
-    }
-    .create_comment_body {
-        border: 2px solid $secondary-color;
-    }
-    .create_comment_submit {
-        font-weight: 600;
-        padding: 0.2em;
-        margin-top: 1em;
-        color:white;
-        border: none;
-        background-color: $notice-color;
-    }
-    form {
-        display: flex;
-        flex-direction: column;
-    }
-    label {
-        margin-top: 1em;
-        color: $secondary-color;
-        font-weight: 600;
     }
 }
 
@@ -136,50 +108,19 @@ $notice-color: #59cd90;
     display: flex;
     flex-direction: column;
     .render_comment_author {
-        color: $secondary-color;
         font-weight: 600;
     }
     .render_comment_timestamp {
-        color: $secondary-color;
         font-size: 0.7em;
     }
     .render_comment_body {
         margin-top:0.5em;
         margin-bottom:0.5em;
-        width: inherit;
-    }
-    a {
-        font-size: 0.7em;
-        color:$secondary-color;
-        text-decoration: none;
     }
 }
 
 .form_new_container {
-    width: 50em;
+    width: 40em;
     display: flex;
     flex-direction: column;
-    .form_new_title {
-        height:3em;
-        border: 2px solid $secondary-color;
-    }
-    .form_new_body {
-        max-width: 100%;
-        min-width: 100%;
-        height: 40em;
-        border: 2px solid $secondary-color;
-    }
-    .form_new_submit {
-        font-weight: 600;
-        padding: 0.2em;
-        margin-top: 1em;
-        color:white;
-        border: none;
-        background-color: $notice-color;
-    }
-    label {
-        margin-top: 1em;
-        color: $secondary-color;
-        font-weight: 600;
-    }
 }

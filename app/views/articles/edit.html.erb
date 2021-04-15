@@ -1,5 +1,5 @@
 <%= content_for :title do %>
-  <h1 class="page_title">edit post</h1>
+  <h1 class="page_title">Edit Post - <%= @article.title %></h1>
 <%end%>
 <%= render 'form', article: @article %>
 <%= link_to 'Show', @article %> |
