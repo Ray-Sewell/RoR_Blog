@@ -40,13 +40,12 @@ time, mark, audio, video {
     }
 }
 
-.application_body_container {
+.application_body {
     display: flex;
-    justify-content: center;
-    .application_body {
-        margin-top: 1em;
-        margin-bottom: 2em;
-    }
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: 2em;
 }
 
 .flash_collection {

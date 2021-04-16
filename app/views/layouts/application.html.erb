@@ -15,13 +15,11 @@
 
   <body>
     <div class="nav_bar">
-        <%= link_to "Yet another blog app", root_path %>
-        <%= yield :title %>
+      <%= link_to "Yet another blog app", root_path %>
+      <%= yield :title %>
     </div>
-    <div class="application_body_container">
-      <div class="application_body">
-        <%= yield %>
-      </div>
+    <div class="application_body">
+      <%= yield %>
     </div>
     <div class="flash_collection">
       <% flash.each do |type, msg| %>

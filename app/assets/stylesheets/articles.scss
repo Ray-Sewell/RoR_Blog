@@ -21,10 +21,12 @@ label {
     color: $secondary-color;
     font-weight: 600;
 }
+
 .confirm_button {
     font-family: Helvetica, Arial, sans-serif;
     margin-top: 1em;
-    padding-top: 0.2em;
+    padding: 0.2em;
+    padding-bottom: 0.1em;
     text-align: center;
     font-size: 1.3em;
     font-weight: 700;
@@ -34,6 +36,7 @@ label {
     border:none;
     cursor: pointer;
 }
+
 .article_title {
     text-align: center;
     font-size: 1.4em;
@@ -41,39 +44,35 @@ label {
     color:#3fa7d6;
     text-decoration: none;
 }
+
 .input_basic, .input_body, select {
     border: 2px solid $secondary-color;
     height: 2em;
-    min-width: 10em;
-    max-width: 100%;
+    min-width: 100%;
     resize: vertical;
 }
 .input_body {
-    height:40em;
+    height:30vh;
 }
 
-.index_article_container {
+.index_article_collection {
     display: flex;
     flex-direction: column;
-    .index_article_collection {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .index_article_preview {
-            margin: 1em;
-            max-width: 50em;
-            .index_article_body {
-                margin-top: 1em;
-                margin-bottom: 1em;
-                max-height: 12em;
-                overflow: auto;
-            }
-            .index_article_destroy {
-                float: left;
-            }
-            .index_article_edit {
-                float: right;
-            }
+    align-items: center;
+    .index_article_preview {
+        margin: 1em;
+        max-width: 50em;
+        .index_article_body {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            max-height: 12em;
+            overflow: auto;
+        }
+        .index_article_destroy {
+            float: left;
+        }
+        .index_article_edit {
+            float: right;
         }
     }
 }
@@ -123,4 +122,11 @@ label {
     width: 40em;
     display: flex;
     flex-direction: column;
+}
+
+#error_explanation {
+    margin: 1em;
+    h2 {
+        color: $primary-color;
+    }
 }

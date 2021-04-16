@@ -1,18 +1,18 @@
 <%= content_for :title do %>
   <h1 class="page_title">All Posts</h1>
 <%end%>
-<div class="index_article_container">
+<div class="index_article_collection">
   <%= link_to 'New Post', new_article_path, class: "confirm_button" %>
-  <div class="index_article_collection">
-    <% @articles.each do |article| %>
+  <% @articles.each do |article| %>
+    <% unless article.archived? %>
       <div class="index_article_preview">
         <%= link_to article.title, article, class: "article_title" %>
-        <div class="index_article_body"><p><%= article.body %></p></div>
+        <p class="index_article_body"><%= article.body %></p>
         <div class="index_aricle_nav">
-          <div class="index_article_destroy"><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-          <div class="index_article_edit"><%= link_to 'Edit', edit_article_path(article) %></div>
+          <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, class: "index_article_destroy" %>
+          <%= link_to 'Edit', edit_article_path(article), class: "index_article_edit" %>
         </div>
       </div>
     <% end %>
-  </div>
+  <% end %>
 </div>
