@@ -7,8 +7,8 @@ module Visible
       validates :status, inclusion: { in: VALID_STATUSES }
     end
   
-    def archived?
-      status == 'archived'
+    def visible?
+      status == 'public'
     end
 end
   

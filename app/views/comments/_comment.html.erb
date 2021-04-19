@@ -1,5 +1,4 @@
-<%# Seems to fix a ghost delete on showing an article, unsure what is causing the issue%>
-<% unless comment.author.nil? %>
+<% if comment.visible? %>
   <div class="render_comment_container">
     <p class="render_comment_author"><%= comment.author%></p>
     <p class="render_comment_timestamp"><%= comment.created_at%></p>

@@ -4,7 +4,7 @@
 <div class="index_article_collection">
   <%= link_to 'New Post', new_article_path, class: "confirm_button" %>
   <% @articles.each do |article| %>
-    <% unless article.archived? %>
+    <% if article.visible? %>
       <div class="index_article_preview">
         <%= link_to article.title, article, class: "article_title" %>
         <p class="index_article_body"><%= article.body %></p>
