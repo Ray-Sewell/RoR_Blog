@@ -55,6 +55,10 @@ label {
     height:30vh;
 }
 
+.article_nav {
+    margin-top: 1em;
+}
+
 .index_article_collection {
     display: flex;
     flex-direction: column;
@@ -125,7 +129,7 @@ label {
 }
 
 #error_explanation {
-    margin: 1em;
+    margin-top: 1em;
     h2 {
         color: $primary-color;
     }
